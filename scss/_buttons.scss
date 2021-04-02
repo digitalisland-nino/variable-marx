@@ -16,7 +16,7 @@ button {
   border: 1px solid transparent;
   font-size: 1rem;
   line-height: 1.5;
-  transition: color $trans ease-in-out, background-color $trans ease-in-out, border-color $trans ease-in-out, box-shadow $trans ease-in-out;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
 input[type=submit]::-moz-focus-inner,

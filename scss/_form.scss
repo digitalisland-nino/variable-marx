@@ -23,12 +23,12 @@ textarea {
   font-size: 1rem;
   padding: $sm-pad $md-pad;
   line-height: 1.5;
-  transition: border-color $trans ease-in-out, box-shadow $trans ease-in-out;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
   font-family: $sans-serif;
   word-break: normal;
 }
 
-input[type="color"] {
+input[type="color"], {
   background: $white;
   border: $border;
   border-radius: $br;
@@ -47,7 +47,7 @@ input:not([type]) {
   width: 100%;
   padding: $sm-pad $md-pad;
   line-height: 1.5;
-  transition: border-color $trans ease-in-out, box-shadow $trans ease-in-out;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
   text-align: left;
   word-break: normal;
 }
