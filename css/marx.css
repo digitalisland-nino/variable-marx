@@ -1,5 +1,72 @@
 /* Document
  * ========================================================================== */
+
+/**
+ 	Custom properties / Variables.
+	*/
+:root {
+  /* 	Basic stylings */
+  --br: 4px;
+  --xs-pad: 4px;
+  --sm-pad: 8px;
+  --md-pad: 16px;
+  --lg-pad: 20px;
+  --xlg-pad: 40px;
+  --trans: var(--trans);
+
+  /* 	Breakpoints */
+  --small-breakpoint: 400px;
+  --large-breakpoint: 768px;
+
+  /* Colors */
+  --primary: #007bff;
+  --accent: #64ffda;
+  --red: #f44336;
+  --dark-red: #ea1c0d;
+  --yellow: #ffeb3b;
+  --grey: #f7f7f9;
+  --dark-grey: #a0a0a0;
+  --white: #fff;
+  --black: #000;
+
+  /* Text */
+  --text: rgba(0, 0, 0, 0.8);
+  --secondary: rgba(0, 0, 0, 0.54);
+  --disabled: rgba(0, 0, 0, 0.38);
+  --dividers: rgba(0, 0, 0, 0.12);
+
+  /* Links */
+  --link-color: var(--primary);
+  --link-hover-color: #0062cc;
+  --link-hover-bg: #0069d9;
+
+  /* Font */
+  --sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  --serif: Georgia, Times, "Times New Roman", serif;
+  --monospace: Menlo, Monaco, Consolas, "Courier New", monospace;
+  --font-family: var(--sans-serif);
+
+  /* Typography */
+  --font-size-base: 16px;
+  --font-size-small: 14px;
+  --font-size-h1: 40px;
+  --font-size-h2: 32px;
+  --font-size-h3: 28px;
+  --font-size-h4: 24px;
+  --font-size-h5: 20px;
+  --font-size-h6: 16px;
+  --line-height-base: 1.5;
+
+  /* Other */
+  --border: 1px solid var(--dividers);
+  --border-color: #80bdff;
+  --button-border: #005cbf;
+  --button-shadow: rgba(0, 123, 255, 0.5);
+  --input-shadow: rgba(0, 123, 255, 0.25);
+}
+
 /**
  * Add border box sizing in all browsers (opinionated).
  */
@@ -7,7 +74,8 @@
 ::before,
 ::after {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 /**
  * 1. Add text decoration inheritance in all browsers (opinionated).
@@ -18,7 +86,8 @@
   text-decoration: inherit;
   /* 1 */
   vertical-align: inherit;
-  /* 2 */ }
+  /* 2 */
+}
 
 /**
  * 1. Use the default cursor in all browsers (opinionated).
@@ -37,7 +106,7 @@ html {
   -moz-tab-size: 4;
   /* 3 */
   -o-tab-size: 4;
-     tab-size: 4;
+  tab-size: 4;
   /* 3 */
   -webkit-tap-highlight-color: transparent;
   -ms-text-size-adjust: 100%;
@@ -45,7 +114,8 @@ html {
   -webkit-text-size-adjust: 100%;
   /* 5 */
   word-break: break-word;
-  /* 6 */ }
+  /* 6 */
+}
 
 /* Sections
  * ========================================================================== */
@@ -53,7 +123,8 @@ html {
  * Remove the margin in all browsers (opinionated).
  */
 body {
-  margin: 0; }
+  margin: 0;
+}
 
 /**
  * Correct the font size and margin on `h1` elements within `section` and
@@ -61,7 +132,8 @@ body {
  */
 h1 {
   font-size: 2em;
-  margin: 0.67em 0; }
+  margin: 0.67em 0;
+}
 
 /* Grouping content
  * ========================================================================== */
@@ -73,7 +145,8 @@ dl ol,
 dl ul,
 ol dl,
 ul dl {
-  margin: 0; }
+  margin: 0;
+}
 
 /**
  * Remove the margin on nested lists in Edge 18- and IE.
@@ -82,7 +155,8 @@ ol ol,
 ol ul,
 ul ol,
 ul ul {
-  margin: 0; }
+  margin: 0;
+}
 
 /**
  * 1. Add the correct sizing in Firefox.
@@ -92,13 +166,15 @@ hr {
   height: 0;
   /* 1 */
   overflow: visible;
-  /* 2 */ }
+  /* 2 */
+}
 
 /**
  * Add the correct display in IE.
  */
 main {
-  display: block; }
+  display: block;
+}
 
 /**
  * Remove the list style on navigation lists in all browsers (opinionated).
@@ -106,7 +182,8 @@ main {
 nav ol,
 nav ul {
   list-style: none;
-  padding: 0; }
+  padding: 0;
+}
 
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
@@ -116,7 +193,8 @@ pre {
   font-family: monospace, monospace;
   /* 1 */
   font-size: 1em;
-  /* 2 */ }
+  /* 2 */
+}
 
 /* Text-level semantics
  * ========================================================================== */
@@ -124,7 +202,8 @@ pre {
  * Remove the gray background on active links in IE 10.
  */
 a {
-  background-color: transparent; }
+  background-color: transparent;
+}
 
 /**
  * Add the correct text decoration in Edge 18-, IE, and Safari.
@@ -132,14 +211,16 @@ a {
 abbr[title] {
   text-decoration: underline;
   -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted; }
+  text-decoration: underline dotted;
+}
 
 /**
  * Add the correct font weight in Chrome, Edge, and Safari.
  */
 b,
 strong {
-  font-weight: bolder; }
+  font-weight: bolder;
+}
 
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
@@ -151,13 +232,15 @@ samp {
   font-family: monospace, monospace;
   /* 1 */
   font-size: 1em;
-  /* 2 */ }
+  /* 2 */
+}
 
 /**
  * Add the correct font size in all browsers.
  */
 small {
-  font-size: 80%; }
+  font-size: 80%;
+}
 
 /* Embedded content
  * ========================================================================== */
@@ -170,45 +253,52 @@ iframe,
 img,
 svg,
 video {
-  vertical-align: middle; }
+  vertical-align: middle;
+}
 
 /**
  * Add the correct display in IE 9-.
  */
 audio,
 video {
-  display: inline-block; }
+  display: inline-block;
+}
 
 /**
  * Add the correct display in iOS 4-7.
  */
 audio:not([controls]) {
   display: none;
-  height: 0; }
+  height: 0;
+}
 
 /**
  * Remove the border on iframes in all browsers (opinionated).
  */
 iframe {
-  border-style: none; }
+  border-style: none;
+}
 
 /**
  * Remove the border on images within links in IE 10-.
  */
 img {
-  border-style: none; }
+  border-style: none;
+}
 
 /**
  * Change the fill color to match the text color in all browsers (opinionated).
  */
 svg:not([fill]) {
-  fill: currentColor; }
+  fill: currentColor;
+}
 
 /**
  * Hide the overflow in IE.
  */
 svg:not(:root) {
-  overflow: hidden; }
+  overflow: hidden;
+}
 
 /* Tabular data
  * ========================================================================== */
@@ -216,7 +306,8 @@ svg:not(:root) {
  * Collapse border spacing in all browsers (opinionated).
  */
 table {
-  border-collapse: collapse; }
+  border-collapse: collapse;
+}
 
 /* Forms
  * ========================================================================== */
@@ -226,7 +317,8 @@ table {
 button,
 input,
 select {
-  margin: 0; }
+  margin: 0;
+}
 
 /**
  * 1. Show the overflow in IE.
@@ -236,7 +328,8 @@ button {
   overflow: visible;
   /* 1 */
   text-transform: none;
-  /* 2 */ }
+  /* 2 */
+}
 
 /**
  * Correct the inability to style buttons in iOS and Safari.
@@ -245,23 +338,26 @@ button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
-  -webkit-appearance: button; }
+  -webkit-appearance: button;
+}
 
 /**
  * 1. Change the inconsistent appearance in all browsers (opinionated).
  * 2. Correct the padding in Firefox.
  */
 fieldset {
-  border: 1px solid #a0a0a0;
+  border: 1px solid var(--dark-grey);
   /* 1 */
   padding: 0.35em 0.75em 0.625em;
-  /* 2 */ }
+  /* 2 */
+}
 
 /**
  * Show the overflow in Edge 18- and IE.
  */
 input {
-  overflow: visible; }
+  overflow: visible;
+}
 
 /**
  * 1. Correct the text wrapping in Edge 18- and IE.
@@ -275,7 +371,8 @@ legend {
   max-width: 100%;
   /* 1 */
   white-space: normal;
-  /* 1 */ }
+  /* 1 */
+}
 
 /**
  * 1. Add the correct display in Edge 18- and IE.
@@ -285,13 +382,15 @@ progress {
   display: inline-block;
   /* 1 */
   vertical-align: baseline;
-  /* 2 */ }
+  /* 2 */
+}
 
 /**
  * Remove the inheritance of text transform in Firefox.
  */
 select {
-  text-transform: none; }
+  text-transform: none;
+}
 
 /**
  * 1. Remove the margin in Firefox and Safari.
@@ -304,14 +403,16 @@ textarea {
   overflow: auto;
   /* 2 */
   resize: vertical;
-  /* 3 */ }
+  /* 3 */
+}
 
 /**
  * Remove the padding in IE 10-.
  */
 [type="checkbox"],
 [type="radio"] {
-  padding: 0; }
+  padding: 0;
+}
 
 /**
  * 1. Correct the odd appearance in Chrome, Edge, and Safari.
@@ -321,27 +422,31 @@ textarea {
   -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
-  /* 2 */ }
+  /* 2 */
+}
 
 /**
  * Correct the cursor style of increment and decrement buttons in Safari.
  */
 ::-webkit-inner-spin-button,
 ::-webkit-outer-spin-button {
-  height: auto; }
+  height: auto;
+}
 
 /**
  * Correct the text style of placeholders in Chrome, Edge, and Safari.
  */
 ::-webkit-input-placeholder {
   color: inherit;
-  opacity: 0.54; }
+  opacity: 0.54;
+}
 
 /**
  * Remove the inner padding in Chrome, Edge, and Safari on macOS.
  */
 ::-webkit-search-decoration {
-  -webkit-appearance: none; }
+  -webkit-appearance: none;
+}
 
 /**
  * 1. Correct the inability to style upload buttons in iOS and Safari.
@@ -351,26 +456,30 @@ textarea {
   -webkit-appearance: button;
   /* 1 */
   font: inherit;
-  /* 2 */ }
+  /* 2 */
+}
 
 /**
  * Remove the inner border and padding of focus outlines in Firefox.
  */
 ::-moz-focus-inner {
   border-style: none;
-  padding: 0; }
+  padding: 0;
+}
 
 /**
  * Restore the focus outline styles unset by the previous rule in Firefox.
  */
 :-moz-focusring {
-  outline: 1px dotted ButtonText; }
+  outline: 1px dotted ButtonText;
+}
 
 /**
  * Remove the additional :invalid styles in Firefox.
  */
 :-moz-ui-invalid {
-  box-shadow: none; }
+  box-shadow: none;
+}
 
 /* Interactive
  * ========================================================================== */
@@ -378,7 +487,8 @@ textarea {
  * Add the correct display in Edge 18- and IE.
  */
 details {
-  display: block; }
+  display: block;
+}
 
 /*
  * Add the correct styles in Edge 18-, IE, and Safari.
@@ -398,16 +508,19 @@ dialog {
   right: 0;
   width: -moz-fit-content;
   width: -webkit-fit-content;
-  width: fit-content; }
+  width: fit-content;
+}
 
 dialog:not([open]) {
-  display: none; }
+  display: none;
+}
 
 /*
  * Add the correct display in all browsers.
  */
 summary {
-  display: list-item; }
+  display: list-item;
+}
 
 /* Scripting
  * ========================================================================== */
@@ -415,13 +528,15 @@ summary {
  * Add the correct display in IE 9-.
  */
 canvas {
-  display: inline-block; }
+  display: inline-block;
+}
 
 /**
  * Add the correct display in IE.
  */
 template {
-  display: none; }
+  display: none;
+}
 
 /* User interaction
  * ========================================================================== */
@@ -442,13 +557,15 @@ textarea,
   -ms-touch-action: manipulation;
   /* 1 */
   touch-action: manipulation;
-  /* 2 */ }
+  /* 2 */
+}
 
 /**
  * Add the correct display in IE 10-.
  */
 [hidden] {
-  display: none; }
+  display: none;
+}
 
 /* Accessibility
  * ========================================================================== */
@@ -456,13 +573,15 @@ textarea,
  * Change the cursor on busy elements in all browsers (opinionated).
  */
 [aria-busy="true"] {
-  cursor: progress; }
+  cursor: progress;
+}
 
 /*
  * Change the cursor on control elements in all browsers (opinionated).
  */
 [aria-controls] {
-  cursor: pointer; }
+  cursor: pointer;
+}
 
 /*
  * Change the cursor on disabled, not-editable, or otherwise
@@ -470,18 +589,21 @@ textarea,
  */
 [aria-disabled="true"],
 [disabled] {
-  cursor: not-allowed; }
+  cursor: not-allowed;
+}
 
 /*
  * Change the display on visually hidden accessible elements
  * in all browsers (opinionated).
  */
 [aria-hidden="false"][hidden] {
-  display: initial; }
+  display: initial;
+}
 
 [aria-hidden="false"][hidden]:not(:focus) {
   clip: rect(0, 0, 0, 0);
-  position: absolute; }
+  position: absolute;
+}
 
 /*! Marx v3.0.6 - The classless CSS reset (perfect for Communists) | MIT License | https://github.com/mblode/marx */
 main,
@@ -493,63 +615,75 @@ aside,
 details,
 summary {
   margin: 0 auto;
-  margin-bottom: 16px;
-  width: 100%; }
+  margin-bottom: var(--md-pad);
+  width: 100%;
+}
 
 main {
   display: block;
   margin: 0 auto;
-  max-width: 768px;
-  padding: 0 16px 16px; }
+  max-width: var(--large-breakpoint);
+  padding: 0 var(--md-pad) var(--md-pad);
+}
 
 footer {
-  border-top: 1px solid rgba(0, 0, 0, 0.12);
-  padding: 16px 0;
-  text-align: center; }
-  footer p {
-    margin-bottom: 0; }
+  border-top: var(--border);
+  padding: var(--md-pad) 0;
+  text-align: center;
+}
+footer p {
+  margin-bottom: 0;
+}
 
 hr {
   border: 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.12);
+  border-top: var(--border);
   display: block;
-  margin-top: 16px;
-  margin-bottom: 16px;
+  margin-top: var(--md-pad);
+  margin-bottom: var(--md-pad);
   width: 100%;
   -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   height: 0;
-  overflow: visible; }
+  overflow: visible;
+}
 
 img {
   height: auto;
   max-width: 100%;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: var(--small-breakpoint)) {
   article,
   section,
   aside {
     clear: both;
     display: block;
-    max-width: 100%; }
+    max-width: 100%;
+  }
   img {
-    margin-right: 16px; } }
+    margin-right: var(--md-pad);
+  }
+}
 
 embed,
 iframe,
 video {
-  border: 0; }
+  border: 0;
+}
 
 body {
-  color: rgba(0, 0, 0, 0.8);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: 16px;
-  line-height: 1.5; }
+  color: var(--text);
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+}
 
 p {
   margin: 0;
-  margin-bottom: 16px; }
+  margin-bottom: var(--md-pad);
+}
 
 h1,
 h2,
@@ -560,104 +694,127 @@ h6 {
   color: inherit;
   font-family: inherit;
   line-height: 1.2;
-  font-weight: 500; }
+  font-weight: 500;
+}
 
 h1 {
-  font-size: 40px;
-  margin: 20px 0 16px; }
+  font-size: var(--font-size-h1);
+  margin: var(--lg-pad) 0 var(--md-pad);
+}
 
 h2 {
-  font-size: 32px;
-  margin: 20px 0 16px; }
+  font-size: var(--font-size-h2);
+  margin: var(--lg-pad) 0 var(--md-pad);
+}
 
 h3 {
-  font-size: 28px;
-  margin: 16px 0 4px; }
+  font-size: var(--font-size-h3);
+  margin: var(--md-pad) 0 var(--xs-pad);
+}
 
 h4 {
-  font-size: 24px;
-  margin: 16px 0 4px; }
+  font-size: var(--font-size-h4);
+  margin: var(--md-pad) 0 var(--xs-pad);
+}
 
 h5 {
-  font-size: 20px;
-  margin: 16px 0 4px; }
+  font-size: var(--font-size-h5);
+  margin: var(--md-pad) 0 var(--xs-pad);
+}
 
 h6 {
-  font-size: 16px;
-  margin: 16px 0 4px; }
+  font-size: var(--font-size-h6);
+  margin: var(--md-pad) 0 var(--xs-pad);
+}
 
 small {
-  color: rgba(0, 0, 0, 0.54);
-  vertical-align: bottom; }
+  color: var(--secondary);
+  vertical-align: bottom;
+}
 
 pre {
-  background: #f7f7f9;
-  color: rgba(0, 0, 0, 0.8);
+  background: var(--grey);
+  color: var(--text);
   display: block;
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-  font-size: 16px;
-  margin: 16px 0;
-  padding: 16px;
+  font-family: var(--monospace);
+  font-size: var(--font-size-base);
+  margin: var(--md-pad) 0;
+  padding: var(--md-pad);
   white-space: pre-wrap;
-  overflow-wrap: break-word; }
+  overflow-wrap: break-word;
+}
 
 code {
-  color: rgba(0, 0, 0, 0.8);
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-  font-size: 16px;
+  color: var(--text);
+  font-family: var(--monospace);
+  font-size: var(--font-size-base);
   line-height: inherit;
   margin: 0;
   padding: 0;
   vertical-align: baseline;
   word-break: break-all;
-  word-wrap: break-word; }
+  word-wrap: break-word;
+}
 
 a {
-  color: #007bff;
+  color: var(--primary);
   text-decoration: none;
-  background-color: transparent; }
-  a:hover, a:focus {
-    color: #0062cc;
-    text-decoration: underline; }
+  background-color: transparent;
+}
+a:hover,
+a:focus {
+  color: var(--link-hover-color);
+  text-decoration: underline;
+}
 
 dl {
-  margin-bottom: 16px; }
+  margin-bottom: var(--md-pad);
+}
 
 dd {
-  margin-left: 40px; }
+  margin-left: var(--xlg-pad);
+}
 
 ul,
 ol {
-  margin-bottom: 8px;
-  padding-left: 40px;
-  vertical-align: baseline; }
+  margin-bottom: var(--sm-pad);
+  padding-left: var(--xlg-pad);
+  vertical-align: baseline;
+}
 
 blockquote {
-  border-left: 2px solid rgba(0, 0, 0, 0.8);
-  font-family: Georgia, Times, "Times New Roman", serif;
+  border-left: 2px solid var(--text);
+  font-family: var(--serif);
   font-style: italic;
-  margin: 16px 0;
-  padding-left: 16px; }
+  margin: var(--md-pad) 0;
+  padding-left: var(--md-pad);
+}
 
 figcaption {
-  font-family: Georgia, Times, "Times New Roman", serif; }
+  font-family: var(--serif);
+}
 
 u {
-  text-decoration: underline; }
+  text-decoration: underline;
+}
 
 s {
-  text-decoration: line-through; }
+  text-decoration: line-through;
+}
 
 sup {
-  font-size: 14px;
-  vertical-align: super; }
+  font-size: var(--font-size-small);
+  vertical-align: super;
+}
 
 sub {
-  font-size: 14px;
-  vertical-align: sub; }
+  font-size: var(--font-size-small);
+  vertical-align: sub;
+}
 
 mark {
-  background: #ffeb3b; }
+  background: var(--yellow);
+}
 
 input[type="text"],
 input[type="password"],
@@ -674,45 +831,60 @@ input[type="search"],
 input[type="tel"],
 select,
 textarea {
-  background: #fff;
+  background: var(--white);
   background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
-  color: rgba(0, 0, 0, 0.8);
+  border: var(--border);
+  border-radius: var(--br);
+  color: var(--text);
   display: block;
   width: 100%;
   font-size: 1rem;
-  padding: 8px 16px;
-  line-height: 1.5;
-  -webkit-transition: border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
-  transition: border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
-  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
+  padding: var(--sm-pad) var(--md-pad);
+  line-height: var(--line-height-base);
+  -webkit-transition: border-color var(--trans) ease-in-out,
+    -webkit-box-shadow var(--trans) ease-in-out;
+  transition: border-color var(--trans) ease-in-out,
+    -webkit-box-shadow var(--trans) ease-in-out;
+  transition: border-color var(--trans) ease-in-out,
+    box-shadow var(--trans) ease-in-out;
+  transition: border-color var(--trans) ease-in-out,
+    box-shadow var(--trans) ease-in-out,
+    -webkit-box-shadow var(--trans) ease-in-out;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+}
 
 input[type="color"] {
-  background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
+  background: var(--white);
+  border: var(--border);
+  border-radius: var(--br);
   display: inline-block;
-  vertical-align: middle; }
+  vertical-align: middle;
+}
 
 input:not([type]) {
   -webkit-appearance: none;
-  background: #fff;
+  background: var(--white);
   background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
-  color: rgba(0, 0, 0, 0.8);
+  border: var(--border);
+  border-radius: var(--br);
+  color: var(--text);
   display: block;
   width: 100%;
-  padding: 8px 16px;
-  line-height: 1.5;
-  -webkit-transition: border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
-  transition: border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
-  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
-  text-align: left; }
+  padding: var(--sm-pad) var(--md-pad);
+  line-height: var(--line-height-base);
+  -webkit-transition: border-color var(--trans) ease-in-out,
+    -webkit-box-shadow var(--trans) ease-in-out;
+  transition: border-color var(--trans) ease-in-out,
+    -webkit-box-shadow var(--trans) ease-in-out;
+  transition: border-color var(--trans) ease-in-out,
+    box-shadow var(--trans) ease-in-out;
+  transition: border-color var(--trans) ease-in-out,
+    box-shadow var(--trans) ease-in-out,
+    -webkit-box-shadow var(--trans) ease-in-out;
+  text-align: left;
+}
 
 input[type="text"]:focus,
 input[type="password"]:focus,
@@ -730,23 +902,26 @@ input[type="tel"]:focus,
 input[type="color"]:focus,
 select:focus,
 textarea:focus {
-  background-color: #fff;
-  border-color: #80bdff;
+  background-color: var(--white);
+  border-color: var(--border-color);
   outline: 0;
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-          box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
+  -webkit-box-shadow: 0 0 0 0.2rem var(--input-shadow);
+  box-shadow: 0 0 0 0.2rem var(--input-shadow);
+}
 
 input:not([type]):focus {
-  background-color: #fff;
-  border-color: #80bdff;
+  background-color: var(--white);
+  border-color: var(--border-color);
   outline: 0;
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-          box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
+  -webkit-box-shadow: 0 0 0 0.2rem var(--input-shadow);
+  box-shadow: 0 0 0 0.2rem var(--input-shadow);
+}
 
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
-  outline: 1px thin rgba(0, 0, 0, 0.12); }
+  outline: 1px thin var(--dividers);
+}
 
 input[type="text"][disabled],
 input[type="password"][disabled],
@@ -764,165 +939,202 @@ input[type="tel"][disabled],
 input[type="color"][disabled],
 select[disabled],
 textarea[disabled] {
-  background-color: rgba(0, 0, 0, 0.12);
-  color: rgba(0, 0, 0, 0.54);
+  background-color: var(--dividers);
+  color: var(--secondary);
   cursor: not-allowed;
-  opacity: 1; }
+  opacity: 1;
+}
 
 input:not([type])[disabled] {
-  background-color: rgba(0, 0, 0, 0.12);
-  color: rgba(0, 0, 0, 0.54);
+  background-color: var(--dividers);
+  color: var(--secondary);
   cursor: not-allowed;
-  opacity: 1; }
+  opacity: 1;
+}
 
 input[readonly],
 select[readonly],
 textarea[readonly] {
-  border-color: rgba(0, 0, 0, 0.12);
-  color: rgba(0, 0, 0, 0.54); }
+  border-color: var(--dividers);
+  color: var(--secondary);
+}
 
 input:focus:invalid,
 textarea:focus:invalid,
 select:focus:invalid {
-  border-color: #ea1c0d;
-  color: #f44336; }
+  border-color: var(--dark-red);
+  color: var(--red);
+}
 
 input[type="file"]:focus:invalid:focus,
 input[type="radio"]:focus:invalid:focus,
 input[type="checkbox"]:focus:invalid:focus {
-  outline-color: #f44336; }
+  outline-color: var(--red);
+}
 
 select {
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  vertical-align: sub; }
+  border: var(--border);
+  vertical-align: sub;
+}
 
 select:not([size]):not([multiple]) {
   height: -webkit-calc(2.25rem + 2px);
-  height: calc(2.25rem + 2px); }
+  height: calc(2.25rem + 2px);
+}
 
 select[multiple] {
-  height: auto; }
+  height: auto;
+}
 
 label {
   display: inline-block;
-  line-height: 2; }
+  line-height: 2;
+}
 
 fieldset {
   border: 0;
   margin: 0;
-  padding: 8px 0; }
+  padding: var(--sm-pad) 0;
+}
 
 legend {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-  color: rgba(0, 0, 0, 0.8);
+  border-bottom: var(--border);
+  color: var(--text);
   display: block;
-  margin-bottom: 8px;
-  padding: 8px 0;
-  width: 100%; }
+  margin-bottom: var(--sm-pad);
+  padding: var(--sm-pad) 0;
+  width: 100%;
+}
 
 textarea {
   overflow: auto;
-  resize: vertical; }
+  resize: vertical;
+}
 
-input[type=checkbox],
-input[type=radio] {
+input[type="checkbox"],
+input[type="radio"] {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding: 0;
-  display: inline; }
+  display: inline;
+}
 
-input[type=submit],
-input[type=reset],
-input[type=button],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
 button {
-  background-color: #007bff;
-  border: #007bff;
-  border-radius: 4px;
-  color: #fff;
-  padding: 8px 16px;
+  background-color: var(--primary);
+  border: var(--primary);
+  border-radius: var(--br);
+  color: var(--white);
+  padding: var(--sm-pad) var(--md-pad);
   display: inline-block;
   font-weight: 400;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   border: 1px solid transparent;
   font-size: 1rem;
-  line-height: 1.5;
-  -webkit-transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
-  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
-  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, -webkit-box-shadow .15s ease-in-out; }
+  line-height: var(--line-height-base);
+  -webkit-transition: color var(--trans) ease-in-out,
+    background-color var(--trans) ease-in-out,
+    border-color var(--trans) ease-in-out,
+    -webkit-box-shadow var(--trans) ease-in-out;
+  transition: color var(--trans) ease-in-out,
+    background-color var(--trans) ease-in-out,
+    border-color var(--trans) ease-in-out,
+    -webkit-box-shadow var(--trans) ease-in-out;
+  transition: color var(--trans) ease-in-out,
+    background-color var(--trans) ease-in-out,
+    border-color var(--trans) ease-in-out, box-shadow var(--trans) ease-in-out;
+  transition: color var(--trans) ease-in-out,
+    background-color var(--trans) ease-in-out,
+    border-color var(--trans) ease-in-out, box-shadow var(--trans) ease-in-out,
+    -webkit-box-shadow var(--trans) ease-in-out;
+}
 
-input[type=submit]::-moz-focus-inner,
-input[type=reset]::-moz-focus-inner,
-input[type=button]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
 button::-moz-focus-inner {
-  padding: 0; }
+  padding: 0;
+}
 
-input[type=submit]:hover,
-input[type=reset]:hover,
-input[type=button]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
 button:hover {
-  background-color: #0069d9;
-  border-color: #0062cc;
-  color: #fff; }
+  background-color: var(--link-hover-bg);
+  border-color: var(--link-hover-color);
+  color: var(--white);
+}
 
-input[type=submit]:not(:disabled):active,
-input[type=reset]:not(:disabled):active,
-input[type=button]:not(:disabled):active,
+input[type="submit"]:not(:disabled):active,
+input[type="reset"]:not(:disabled):active,
+input[type="button"]:not(:disabled):active,
 button:not(:disabled):active {
-  background-color: #0062cc;
-  border-color: #005cbf;
-  color: #fff; }
+  background-color: var(--link-hover-color);
+  border-color: var(--button-border);
+  color: var(--white);
+}
 
-input[type=submit]:focus,
-input[type=reset]:focus,
-input[type=button]:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus,
 button:focus {
   outline: 0;
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
-          box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5); }
+  -webkit-box-shadow: 0 0 0 0.2rem var(--button-shadow);
+  box-shadow: 0 0 0 0.2rem var(--button-shadow);
+}
 
-input[type=submit]:disabled,
-input[type=reset]:disabled,
-input[type=button]:disabled,
+input[type="submit"]:disabled,
+input[type="reset"]:disabled,
+input[type="button"]:disabled,
 button:disabled {
-  opacity: .65;
+  opacity: 0.65;
   cursor: not-allowed;
-  background-color: #007bff;
-  border-color: #007bff;
-  color: #fff; }
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: var(--white);
+}
 
 table {
-  border-top: 1px solid rgba(0, 0, 0, 0.12);
-  margin-bottom: 16px; }
+  border-top: var(--border);
+  margin-bottom: var(--md-pad);
+}
 
 caption {
-  padding: 8px 0; }
+  padding: var(--sm-pad) 0;
+}
 
 thead th {
   border: 0;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.12);
-  text-align: left; }
+  border-bottom: 2px solid var(--dividers);
+  text-align: left;
+}
 
 tr {
-  margin-bottom: 8px; }
+  margin-bottom: var(--sm-pad);
+}
 
 th,
 td {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-  padding: 16px;
-  vertical-align: inherit; }
+  border-bottom: var(--border);
+  padding: var(--md-pad);
+  vertical-align: inherit;
+}
 
 tfoot tr {
-  text-align: left; }
+  text-align: left;
+}
 
 tfoot td {
-  color: rgba(0, 0, 0, 0.54);
-  font-size: 8px;
+  color: var(--secondary);
+  font-size: var(--sm-pad);
   font-style: italic;
-  padding: 16px 4px; }
+  padding: var(--md-pad) var(--xs-pad);
+}
